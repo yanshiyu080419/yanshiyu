@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>朱朝阳 · 个人主页</title>
+<meta name="description" content="朱朝阳的个人主页：2008 年出生，甘肃康县人，现就读于兰州工业学院。">
+<meta name="theme-color" content="#2f5d50">
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* 首屏前先定主题，避免闪白；并标记 JS 可用（渐入动画只在有 JS 时才隐藏内容） */
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    try {
+      var saved = localStorage.getItem("zc-theme");
+      var sysDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      root.setAttribute("data-theme", saved || (sysDark ? "dark" : "light"));
+    } catch (e) {
+      root.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+</head>
+<body>
+
+<!-- ========== 顶栏 ========== -->
+<header class="site-header" id="siteHeader">
+  <div class="container">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">朱</span>
+      <span>朱朝阳</span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="主导航">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#about">关于</a></li>
+        <li><a class="nav__link" href="#journey">成长</a></li>
+        <li><a class="nav__link" href="#campus">校园</a></li>
+        <li><a class="nav__link" href="#hometown">家乡</a></li>
+        <li><a class="nav__link" href="#gallery">相册</a></li>
+        <li><a class="nav__link" href="#contact">联系</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-tools">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深浅色主题" title="切换深浅色主题">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 12H2M22 12h-2.2M5.6 5.6 4.1 4.1M19.9 19.9l-1.5-1.5M18.4 5.6l1.5-1.5M4.1 19.9l1.5-1.5"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+          <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8Z"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn nav-toggle" id="navToggle" type="button"
+              aria-label="打开菜单" aria-expanded="false" aria-controls="primaryNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ========== 首屏 ========== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="eyebrow hero__badge">Personal Profile</span>
+
+        <h1 class="hero__name">
+          朱朝阳
+          <span class="hero__name-en">Zhu Chaoyang</span>
+        </h1>
+
+        <p class="hero__tagline">
+          甘肃康县人，2008 年出生，现在就读于兰州工业学院。
+          这个页面收着一些照片，也收着一个普通年轻人的来路与去处。
+        </p>
+
+        <ul class="hero__meta">
+          <li class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+            </svg>
+            甘肃 · 康县
+          </li>
+          <li class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3.5v3M16 3.5v3M3.5 10h17"/>
+            </svg>
+            2008 年出生
+          </li>
+          <li class="chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <path d="M12 4 2.8 8.6 12 13.2l9.2-4.6L12 4Z"/><path d="M6 10.8V16c0 1.9 2.7 3.4 6 3.4s6-1.5 6-3.4v-5.2"/>
+            </svg>
+            兰州工业学院
+          </li>
+        </ul>
+
+        <div class="hero__actions">
+          <a class="btn" href="#gallery">看看相册</a>
+          <a class="btn btn--ghost" href="#about">了解更多</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">21</span>
+            <span class="stat__label">张生活照片</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">2008</span>
+            <span class="stat__label">出生年份</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">1942<span>·</span></span>
+            <span class="stat__label">学校的起点</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__portrait">
+        <figure class="portrait-frame">
+          <img src="assets/photos/photo-01.jpg" alt="朱朝阳的照片其一" width="1279" height="1706" fetchpriority="high" decoding="async">
+        </figure>
+        <span class="portrait-tag">陇上江南 · 康县</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 关于 ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="section-title">关于<em>朱朝阳</em></h2>
+        <p class="section-desc">几条最基础的事实，先拼出一个人的大致轮廓。</p>
+      </div>
+
+      <div class="about">
+        <div class="about__cards">
+          <article class="info-card reveal">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3.5v3M16 3.5v3M3.5 10h17"/>
+              </svg>
+            </span>
+            <h3 class="info-card__label">出生年份</h3>
+            <p class="info-card__value">2008</p>
+            <p class="info-card__note">属鼠 · 一〇后</p>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/>
+              </svg>
+            </span>
+            <h3 class="info-card__label">家乡</h3>
+            <p class="info-card__value">甘肃 · 康县</p>
+            <p class="info-card__note">甘肃省陇南市康县</p>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <path d="M12 4 2.8 8.6 12 13.2l9.2-4.6L12 4Z"/><path d="M6 10.8V16c0 1.9 2.7 3.4 6 3.4s6-1.5 6-3.4v-5.2"/>
+              </svg>
+            </span>
+            <h3 class="info-card__label">就读院校</h3>
+            <p class="info-card__value">兰州工业学院</p>
+            <p class="info-card__note">甘肃 · 兰州</p>
+          </article>
+
+          <article class="info-card reveal">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                <path d="M6 4.5h9l3.5 3.5v11.5H6z"/><path d="M9 10h6M9 14h6"/>
+              </svg>
+            </span>
+            <h3 class="info-card__label">目前状态</h3>
+            <p class="info-card__value">在校学生</p>
+            <p class="info-card__note">继续读书，慢慢长大</p>
+          </article>
+        </div>
+
+        <div class="about__text reveal">
+          <p>
+            朱朝阳，2008 年出生，甘肃康县人。康县在甘肃东南部、隶属陇南市，
+            山多、水多、植被厚，是西北少见的温润之地。他的少年时光就长在这样的地方。
+          </p>
+          <p>
+            现在他在兰州工业学院读书。这所学校的前身，是 1942 年新西兰友人路易·艾黎创办的培黎工艺学校，
+            校训是「开物成务、启智求真」——动手和动脑并重，这也是一所工科学校最朴素的气质。
+          </p>
+          <ul class="tag-list">
+            <li># 甘肃康县</li>
+            <li># 兰州求学</li>
+            <li># 2008</li>
+            <li># 兰州工业学院</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 成长轨迹 ========== -->
+  <section class="section section--soft" id="journey">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Journey</span>
+        <h2 class="section-title">成长<em>轨迹</em></h2>
+        <p class="section-desc">从康县到兰州，一条不算远、但需要一步一步走的路。</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__card">
+            <span class="timeline__year">2008</span>
+            <h3 class="timeline__title">出生在甘肃康县</h3>
+            <p class="timeline__text">在陇南的山城里出生，成为这个家庭的一份子。</p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__card">
+            <span class="timeline__year">少年时光</span>
+            <h3 class="timeline__title">康县的山与河</h3>
+            <p class="timeline__text">
+              春天的桑园、秋天的核桃，还有满山满坡的绿——这些是康县最常见的风景，
+              也是他记忆里最早的颜色。
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__card">
+            <span class="timeline__year">求学</span>
+            <h3 class="timeline__title">从康县到兰州</h3>
+            <p class="timeline__text">
+              第一次长时间离开家乡，来到黄河穿城而过的兰州，开始独立生活。
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <span class="timeline__dot" aria-hidden="true"></span>
+          <div class="timeline__card">
+            <span class="timeline__year">现在</span>
+            <h3 class="timeline__title">在兰州工业学院读书</h3>
+            <p class="timeline__text">
+              专业、课程、宿舍、操场——大学生活的日常正在一天天写下。
+              这个页面也会继续记录下去。
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== 校园 ========== -->
+  <section class="section" id="campus">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Campus</span>
+        <h2 class="section-title">他读书的<em>地方</em></h2>
+        <p class="section-desc">兰州工业学院，一所有着八十多年工科底子的学校。</p>
+      </div>
+
+      <div class="media-row">
+        <div class="media-row__visual reveal">
+          <span class="media-row__badge">校训</span>
+          <p class="motto">开物成务<br>启智求真</p>
+          <p class="media-row__sub">兰州工业学院</p>
+        </div>
+
+        <div class="media-row__body reveal">
+          <h3 class="media-row__title">兰州工业学院</h3>
+          <p class="media-row__text">
+            学校发轫于抗战时期兴起的中国工业合作运动，前身是新西兰国际友人路易·艾黎于 1942 年创办的培黎工艺学校；
+            2012 年经教育部和甘肃省人民政府批准，改建为兰州工业学院。现有兰州市七里河校区、兰州新区校区两个校区。
+          </p>
+          <ul class="fact-list">
+            <li><span>建校源头</span>1942 年 · 培黎工艺学校</li>
+            <li><span>改建本科</span>2012 年 · 兰州工业学院</li>
+            <li><span>校训</span>开物成务、启智求真</li>
+            <li><span>校区</span>兰州市七里河区 / 兰州新区</li>
+            <li><span>办学规模</span>15 个教学单位 · 42 个本科专业</li>
+          </ul>
+          <p class="source-note">资料来自兰州工业学院官网《学校简介》（数据更新至 2025 年 9 月 30 日）。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 家乡 ========== -->
+  <section class="section section--soft" id="hometown">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Hometown</span>
+        <h2 class="section-title">他的家乡<em>康县</em></h2>
+        <p class="section-desc">甘肃东南角的小城，山多、水多、绿意厚。</p>
+      </div>
+
+      <div class="media-row media-row--reverse">
+        <div class="media-row__visual reveal">
+          <span class="media-row__badge">这里的物产</span>
+          <ul class="produce">
+            <li>核桃</li>
+            <li>蚕桑</li>
+            <li>魔芋</li>
+            <li>水稻</li>
+          </ul>
+          <p class="media-row__sub">康县 · 陇南</p>
+        </div>
+
+        <div class="media-row__body reveal">
+          <h3 class="media-row__title">甘肃省陇南市康县</h3>
+          <p class="media-row__text">
+            康县在甘肃东南部，隶属陇南市。境内多山多水、植被茂密、四季分明，
+            是西北地区少见的温润之地。核桃、蚕桑、魔芋、水稻，是这里最常见的物产。
+          </p>
+          <ul class="fact-list">
+            <li><span>所属</span>甘肃省陇南市</li>
+            <li><span>位置</span>甘肃省东南部</li>
+            <li><span>物产</span>核桃、蚕桑、魔芋、水稻</li>
+            <li><span>乡镇</span>阳坝、平洛、大南峪、岸门口、云台等</li>
+            <li><span>县城</span>城关镇</li>
+          </ul>
+          <p class="source-note">信息参考康县人民政府网站公开内容。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 相册 ========== -->
+  <section class="section" id="gallery">
+    <div class="container container--wide">
+      <div class="section-head reveal">
+        <span class="eyebrow">Gallery</span>
+        <h2 class="section-title">他的<em>相册</em></h2>
+        <p class="section-desc">共 21 张照片。点开任意一张可以放大查看，左右方向键切换，Esc 关闭。</p>
+      </div>
+
+      <div class="gallery" id="galleryGrid"></div>
+
+      <noscript>
+        <p class="source-note" style="text-align:center">相册需要浏览器开启 JavaScript 才能显示。</p>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ========== 联系 ========== -->
+  <section class="section section--soft" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 class="section-title">想和他说<em>说话</em></h2>
+        <p class="section-desc">如果你也认识他，这里有几条能找到他的线索。</p>
+      </div>
+
+      <div class="contact-grid">
+        <article class="contact-card reveal">
+          <span class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <rect x="3" y="5.5" width="18" height="13" rx="3"/><path d="m4 7.5 8 5.5 8-5.5"/>
+            </svg>
+          </span>
+          <h3 class="contact-card__title">邮箱</h3>
+          <!-- 想显示邮箱：把下面这段文字换成邮箱地址，并把 href 改成 mailto:你的邮箱 -->
+          <p class="contact-card__value is-blank">待填写</p>
+        </article>
+
+        <article class="contact-card reveal">
+          <span class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M4 5.5h6.5l2 3.5h7.5v9.5H4z"/><path d="M8.5 14.5h7"/>
+            </svg>
+          </span>
+          <h3 class="contact-card__title">微信</h3>
+          <p class="contact-card__value is-blank">待填写</p>
+        </article>
+
+        <article class="contact-card reveal">
+          <span class="contact-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M12 4 2.8 8.6 12 13.2l9.2-4.6L12 4Z"/><path d="M6 10.8V16c0 1.9 2.7 3.4 6 3.4s6-1.5 6-3.4v-5.2"/>
+            </svg>
+          </span>
+          <h3 class="contact-card__title">学校</h3>
+          <p class="contact-card__value">兰州工业学院</p>
+          <p class="contact-card__hint">七里河校区 · 兰州市七里河区龚家坪东路 1 号</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <span class="brand__mark" aria-hidden="true">朱</span>
+      <div>
+        <p class="site-footer__name">朱朝阳</p>
+        <p class="site-footer__meta">甘肃康县人 · 兰州工业学院在读</p>
+      </div>
+    </div>
+
+    <p class="site-footer__note">
+      本页面由同学制作，照片版权归本人所有，请勿转载。<br>
+      © <span id="copyrightYear">2026</span> 朱朝阳
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
